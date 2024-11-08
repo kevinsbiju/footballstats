@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Top Scorer and Assister</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional for styling -->
+</head>
+<body>
+    <h1>Top Scorer and Top Assister of the League</h1>
+
+    <form action="top_scorer.php" method="POST">
+        <h2>To find Top Scorer</h2>
+        <label for="league_id">Enter League ID:</label>
+        <input type="number" id="league_id" name="league_id" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <form action="top_assister.php" method="POST">
+        <h2>To find Top Assister</h2>
+        <label for="league_id">Enter League ID:</label>
+        <input type="number" id="league_id" name="league_id" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>   

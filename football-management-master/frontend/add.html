@@ -1,0 +1,248 @@
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Football Database Management</h1>
+
+        <!-- Add Player Form -->
+        <form method="POST" action="footballinsert.php">
+            <h2>Add Player</h2>
+            <label for="playerID">Player ID:</label>
+            <input type="number" id="playerID" name="playerID">
+
+            <label for="fName">First Name:</label>
+            <input type="text" id="fName" name="fName">
+
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lName" name="lName">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+
+            <label for="position1">Position:</label>
+            <input type="text" id="position1" name="position1">
+
+            <label for="position2">Secondary Position:</label>
+            <input type="text" id="position2" name="position2">
+
+            <label for="position3">Tertiary Position:</label>
+            <input type="text" id="position3" name="position3">
+
+            <label for="apps">Appearances:</label>
+            <input type="number" id="apps" name="apps">
+
+            <label for="goals">Goals:</label>
+            <input type="number" id="goals" name="goals">
+
+            <label for="assists">Assists:</label>
+            <input type="number" id="assists" name="assists">
+
+            <label for="tackles">Tackles:</label>
+            <input type="number" id="tackles" name="tackles">
+
+            <label for="interceptions">Interceptions:</label>
+            <input type="number" id="interceptions" name="interceptions">
+
+            <label for="clean_sheets">Clean Sheets:</label>
+            <input type="number" id="clean_sheets" name="clean_sheets">
+
+            <label for="saves">Saves:</label>
+            <input type="number" id="saves" name="saves">
+
+            <label for="squad_number">Squad Number:</label>
+            <input type="number" id="squad_number" name="squad_number">
+
+            <label for="fouls">Fouls:</label>
+            <input type="number" id="fouls" name="fouls">
+
+            <label for="team_id">Team ID:</label>
+            <input type="number" id="team_id" name="team_id">
+
+            <label for="yellow_card">Yellow cards:</label>
+            <input type="number" id="yellow_card" name="yellow_card">
+
+            <label for="red_card">Red cards:</label>
+            <input type="number" id="red_card" name="red_card">
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality">
+
+            <input type="submit" name="addPlayer" value="Add Player">
+        </form>
+
+        <!-- Add League Form -->
+        <form method="POST" action="footballinsert.php">
+            <h2>Add League</h2>
+            <label for="leagueID">League ID:</label>
+            <input type="number" id="leagueID" name="leagueID">
+
+            <label for="league_name">League Name:</label>
+            <input type="text" id="league_name" name="league_name">
+
+            <label for="number_of_clubs">Number of Clubs:</label>
+            <input type="number" id="number_of_clubs" name="number_of_clubs">
+
+            <label for="top_scorer_id">Top Scorer ID:</label>
+            <input type="number" id="top_scorer_id" name="top_scorer_id">
+
+            <label for="top_assister_id">Top Assister ID:</label>
+            <input type="number" id="top_assister_id" name="top_assister_id">
+
+            <label for="most_red_card">Most Red Card ID:</label>
+            <input type="number" id="most_red_card" name="most_red_card">
+
+            <label for="league_leader_id">League Leader ID:</label>
+            <input type="number" id="league_leader_id" name="league_leader_id">
+
+            <label for="best_goal_keeper_id">Best Goalkeeper ID:</label>
+            <input type="number" id="best_goal_keeper_id" name="best_goal_keeper_id">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country">
+
+            <input type="submit" name="addLeague" value="Add League">
+        </form>
+
+        <!-- Add Club Form -->
+        <form method="POST" action="footballinsert.php">
+            <h2>Add Club</h2>
+            <label for="club_id">Club ID:</label>
+            <input type="number" id="club_id" name="club_id">
+
+            <label for="club_name">Club Name:</label>
+            <input type="text" id="club_name" name="club_name">
+
+            <label for="number_of_players">Number of Players:</label>
+            <input type="number" id="number_of_players" name="number_of_players">
+
+            <label for="goals_scored">Goals Scored:</label>
+            <input type="number" id="goals_scored" name="goals_scored">
+
+            <label for="clean_sheets">Clean Sheets:</label>
+            <input type="number" id="clean_sheets" name="clean_sheets">
+
+            <label for="fouls">Fouls:</label>
+            <input type="number" id="fouls" name="fouls">
+
+            <label for="captain_id">Captain ID:</label>
+            <input type="number" id="captain_id" name="captain_id">
+
+            <label for="matches_played">Matches Played:</label>
+            <input type="number" id="matches_played" name="matches_played">
+
+            <label for="wins">Wins:</label>
+            <input type="number" id="wins" name="wins">
+
+            <label for="losses">Losses:</label>
+            <input type="number" id="losses" name="losses">
+
+            <label for="draws">Draws:</label>
+            <input type="number" id="draws" name="draws">
+
+            <label for="red_card">Red Cards:</label>
+            <input type="number" id="red_card" name="red_card">
+
+            <label for="yellow_card">Yellow Cards:</label>
+            <input type="number" id="yellow_card" name="yellow_card">
+
+            <label for="goals_conceded">Goals Conceded:</label>
+            <input type="number" id="goals_conceded" name="goals_conceded">
+            
+            <label for="league_id">League ID:</label>
+            <input type="number" id="league_id" name="league_id">
+
+            <label for="stadium">Stadium:</label>
+            <input type="text" id="stadium" name="stadium">
+
+            <input type="submit" name="addClub" value="Add Club">
+        </form>
+
+        <!-- Add Match Form -->
+        <form method="POST" action="footballinsert.php">
+            <h2>Add Match</h2>
+            <label for="matchID">Match ID:</label>
+            <input type="number" id="matchID" name="matchID">
+
+            <label for="team_home">Home Team ID:</label>
+            <input type="number" id="team_home" name="team_home">
+
+            <label for="team_away">Away Team ID:</label>
+            <input type="number" id="team_away" name="team_away">
+
+            <label for="h_goals">Home Team Goals:</label>
+            <input type="number" id="h_goals" name="h_goals">
+
+            <label for="a_goals">Away Team Goals:</label>
+            <input type="number" id="a_goals" name="a_goals">
+
+            <label for="man_of_the_match">Man of the Match:</label>
+            <input type="text" id="man_of_the_match" name="man_of_the_match">
+
+            <label for="match_date">Match Date:</label>
+            <input type="date" id="match_date" name="match_date">
+
+            <label for="league_id">League ID:</label>
+            <input type="number" id="league_id" name="league_id">
+
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue">
+
+            <input type="submit" name="addMatch" value="Add Match">
+        </form>
+    </div>
+</body>
+</html>
